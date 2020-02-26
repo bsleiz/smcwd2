@@ -1,1 +1,10 @@
 /* first responsive site */
+body 
+{margin:0px}
+{font family: aria, helvetica, sans-serif}
+
+#toggleassist
+{display:none}
+ul.nav-links
+{display: none}
+#toggleassist:checked + ul.nav-links { display: block}
