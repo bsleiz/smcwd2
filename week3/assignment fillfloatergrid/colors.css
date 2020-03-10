@@ -1,8 +1,9 @@
-.red-bg{background-color: salmon;}
+.red-bg{background-color: rgb(240, 192, 186);}
 
-.green-bg{background-color: rgb(106,179,130);}
-.blue-bg{background-color: rgb(47, 69, 90);}
+.green-bg{background-color: rgb(210, 238, 219);}
+.blue-bg{background-color: rgb(182, 212, 240);}
 
-.yellow-bg {background-color: rgb(196, 206, 187);}
+.yellow-bg {background-color: rgb(218, 243, 197);}
 
-.purple-bg {background-color: rgb(165, 128, 202);}
+.purple-bg {background-color: rgb(221, 198, 245);}
+.pink-bg {background-color: pink;}
