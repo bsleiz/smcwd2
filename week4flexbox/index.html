@@ -2,23 +2,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link href="main.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
   <meta charset="UTF-8">
-  <title>Floater</title>
+  <title>Flexbox-based navbar</title>
   </head>
   <body>
   <header>
-      <nav>
-        <img src="bprojlogo.png" class="logo" alt="company logo">
-        <label for="toggleAssist">
-          <img src="hamburger-images.png" class="toggle-button" alt="hamburger menu toggle button">
-          </label>
-          <input type="checkbox" id="toggleAssist">
-          <ul class="nav-links">
-          <li><a href = "index.html">Home</a></li>
-          <li><a href = "page2.html">About</a></li>
-          <li><a href = "page3.html">Blog</a></li>
-          <li><a href = "page4.html">Contact Us</a></li>
+      <nav class="flex">
+        <a href="#" class="logo-container"><img src="bprojlogo.png" class="logo" alt="company logo"></a>
+          <ul class="flex yellow-bg">
+          <li class="order-1 order-lg-1"><a href = "index.html">Home</a></li>
+          <li class="order-2 order-lg-2"><a href = "page2.html">About</a></li>
+          <li class="order-1 order-lg-2"><a href = "page3.html">Blog</a></li>
+          <li class="order-2 order"><a href = "page4.html">Contact Us</a></li>
          </ul>
         </nav>
         </header>
@@ -26,24 +22,27 @@
   <div class = "floater w-100 red-bg">
     <p><img src="IMG_0453olymp2020.jpg" alt="2020 olympic team"></p> 
   </div>
+  
   <div class = "floater w-lg-100 green-bg">
     <p><section<h1> Is the Olympics on? The world will be watching if Japan will host all the new athletes, games and new events.</h1> </section></p>
   </div>
+  <div class ="clearfix no-clearfix-md"></div>
+
   <div class = "floater w-100 blue-bg">
     <img src="brokeprojex.png" alt="image of brooklyn projects store">  
    <p> We are Brooklyn Projects. You find the freshet gear, newest collaboration with local artists and just about the raddest gear for all your adventrues in the concrete jungle. Dont take our word for it, express the latest fashion and ride skate fantasies in our shop now. Look out for new gear weekly and the best is yet to come. Also, look out for the coolest videos this side of the bridge, the los angeles bridge since we arent anywhere near brooklyn. But it a Project.
    Check the bios of our next up an comers. They really make a difffernece in our designs, and want to provide the best to you and reasonable prices.
    </p>
   </div>
+  
   <div class = "floater w-100 w-lg-50 w-md-33 yellow-bg">
     <img src="alexis-sablone-1569087028.jpg" alt="picture of alexis"> </div>
-  <div class = "floater w-lg-50 w-lg-33 purple-bg">
+  
+    <div class = "floater w-lg-50 w-lg-33 purple-bg">
    <img src="samarria-brevard-photo-by-joshua-gateley-espn-images-jpg-1569086490.jpg" alt="picture of samarria"></div>    
    
-  <div class = "floater w-lg-50 w-lg-33 pink-bg">
-     <img src="sky-brown-photo-by-eric-lars-bakke-espn-images-jpg-1569086764.jpg" alt="picture of sky brown"></div>
     <div class = "floater w-lg-50 w-lg-33 pink-bg"><img src="x-games-jpg-1565220932.jpg" alt="x games picture"> </div>
-      <div class = "floater w-lg-50 pink-bg"><img src="alana-smith-1569086875.jpg" alt="picture of alana"></div>
+      
 </main>
  
 <footer>
