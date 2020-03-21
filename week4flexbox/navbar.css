@@ -3,8 +3,9 @@
     flex-direction: column;
 
 }
-.order-1 { order:1;}
-.order-2{order:2;}
+.order-1 {order:1;}
+.order-2 {order:2;}
+
 
 nav .logo{
     max-width: 100%
@@ -36,15 +37,16 @@ nav a{
 }
 @media (min-width: 960px) {
     .flex { flex-direction:row;}
-.order-lg-1 { order:1;}
-.order-lg-2 {order:2;}
+    .order-lg-1 {order:1;}
+    .order-lg-2 {order:2;}
 
-    nav.flex {
+    
+nav.flex {
         flex-direction: row;
         justify-content: space-between;
     }
     nav .logo{
-        max-width:30%;
+        max-width:30%; align-self:center;
     }
     nav ul.flex {
         flex-direction: row;
@@ -62,7 +64,8 @@ nav a{
         border-left : 1px solid red;
         /*margin: 0px 10 px;*/
         flex-basis: 0;
-        flex-grow: 1;
+        flex-grow: 1;}
 
-    }
+    nav .logo-container {width:auto;flex: auto; align-self: center; text-align:center;}
+    
 }
