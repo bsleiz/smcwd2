@@ -24,24 +24,19 @@ nav ul {
 nav ul li {
     padding: 10px;
     border-bottom: 2px solid grey;
-
 }
+
 nav a{
     text-decoration: none;
     color:#222;
-
 }
 
-@media (min-width:500px) {
-
-}
-@media (min-width: 960px) {
-    .flex { flex-direction:row;}
+@media (min-width:768px) {
+    .flex {flex-direction:row;}
     .order-lg-1 {order:1;}
     .order-lg-2 {order:2;}
 
-    
-nav.flex {
+    nav .flex {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -62,10 +57,48 @@ nav.flex {
         border-bottom: none;
         border-right: 1px solid red;
         border-left : 1px solid red;
-        /*margin: 0px 10 px;*/
         flex-basis: 0;
         flex-grow: 1;}
 
-    nav .logo-container {width:auto;flex: auto; align-self: center; text-align:center;}
-    
+    nav .logo-container {
+        width:auto;
+        flex: auto; 
+        align-self: center; 
+        text-align:center;}
 }
+
+@media (min-width: 960px) {
+    .flex { flex-direction:row;}
+    .order-lg-1 {order:1;}
+    .order-lg-2 {order:2;}
+
+    nav .flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav .logo{
+        max-width:30%; align-self:center;
+    }
+    nav ul.flex {
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-grow: 2;
+        text-align: center;
+        align-items: center;
+    }
+    nav li:first-child {
+        border-left:none;
+    }
+    nav ul li {
+        border-bottom: none;
+        border-right: 1px solid red;
+        border-left : 1px solid red;
+        flex-basis: 0;
+        flex-grow: 1;}
+
+    nav .logo-container {
+        width: auto;
+        flex: auto; 
+        align-self: center; 
+        text-align: center;}
+    }
