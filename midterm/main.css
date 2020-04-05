@@ -1,0 +1,64 @@
+@import url(colors.css);
+@import url(navbar.css);
+@import url(layout.css);
+
+body{margin: 0; font-family: 'Indie Flower', cursive;
+    font-family: 'Roboto', sans-serif;}
+header {width:100%; background-color: #9091c9;}
+main {width:100%; background-color:#fabce6; margin:auto;}
+section {padding:15px;}
+img {max-width:100%;}
+grid-container { display:grid;
+    grid-template-rows:[h-line-1 firstH] 1fr [h-line-2] 1fr [h-line-3] 1fr [h-line-4];
+    /**grid-template-rows:[h-line-1] 50% [h-line-2] 50% [h-line-3];} this is same as line above**/
+    grid-template-columns: [v-line-1] 1fr [v-line-2] 1fr [v-line-3] 1fr [v-line-4];
+    grid-gap:15px;
+    height:100vh;
+    
+    
+    .gd-3{grid-column: v-line-3/v-line-4;
+        grid-row:1/ h-line-3;}
+    .gd-4,.gd-5 {grid-row: h-line-2/h-line-4;}
+    .gd-6 {grid-row: h-line-3/h-line-4;}
+    
+    
+    
+@media (min-width:320px) {
+    main {width:300px;}
+    
+}
+@media (min-width:560px){
+    .grid-container { display:grid;
+    grid-template-rows:[h-line-1 firstH] 1fr [h-line-2] 1fr [h-line-3] 1fr [h-line-4];
+    /**grid-template-rows:[h-line-1] 50% [h-line-2] 50% [h-line-3];} this is same as line above**/
+    grid-template-columns: [v-line-1] 100px [v-line-2] auto [v-line-3] 100px [v-line-4];
+    grid-gap:15px;
+    height:400px;
+    width:540px;
+    margin:auto;
+    
+    
+    .gd-3{grid-column: v-line-3/v-line-4;
+        grid-row:1/ h-line-3;}
+    .gd-4,.gd-5 {grid-row: h-line-2/h-line-4;}
+    .gd-6 {grid-row: h-line-3/h-line-4;}
+    
+@media (min-width:768px) {
+    .toggle-button {display:none;}
+    ul.nav-links li{display:inline-block; border-bottom:none;}
+ul.nav-links {display:block; float: right; margin-top:35px;} 
+main {width: 620px;} .flex1 {display:flex;flex-direction:row; flex-wrap: wrap;}
+.box {flex: initial; align-content: center;}
+.flex1 img{align-self:center;flex-wrap: wrap;height:250px;width:250px;flex:auto;}
+.box4 {flex-grow:2;}
+
+} /**END OF MID-SCREEN MEDIA QUERY**/
+
+@media (min-width:960px) {
+    .toggle-button {display:none;}
+    .toggle-button {display:block; float:right;}
+    .nav-links li{display: inline-block; padding:15px; border-bottom:none;}
+    main {width: 960px; margin: auto;}
+    .grid-container{width:800px;}
+
+} /**END OF LARGE SCREEN MEDIA QUERY**/
