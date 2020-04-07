@@ -1,0 +1,29 @@
+@import url('colors.css');
+
+body {margin:0px; box-sizing:border-box;}
+header, main, footer{max-width:100%;}
+header {height: 10vh;}
+main {min-height:80vh;box-sizing:border-box;max-width:100%}
+header h3 {text-align: center;
+    margin: 0px;
+    padding:32px;
+    height: 64px;}
+.block-inline-centering{text-align:center;}
+.flex-center{display:flex; flex-direction:row; justify-content: center;}
+.centering-parent{position:relative;width:260px;height:260px;}
+.centering-child{position:absolute; width:200px;height:200px;top:50%;left:15%; margin-top:-100px;}
+.centering-parent1{position:relative; width:500px; height: 500px; text-align:center;}
+.centering-child1{position:absolute;top:20%; left: 12% ;transform: translate(-10%,-10%);}
+footer{height:100px;text-align:center;}
+footer .text-container {height:100px; width:280px;background-color:dodgerblue;display:table-cell; vertical-align:middle;display:inline-block;}
+
+@media (min-width:320px){
+     main {width:300px; margin:auto;}}
+
+ @media (min-width: 600px){
+main {width: 580px; margin:auto;}
+}
+
+@media (min-width: 900px)
+{main {width: 880px;}
+}
