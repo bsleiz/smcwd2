@@ -2,7 +2,7 @@
 @import url(navbar.css);
 @import url(layout.css);
 
-body{margin: 0px; font-family: 'Indie Flower', cursive;background-color:#fabce6; box-sizing:border-box;}
+body{margin: 0px; font-family: 'Indie Flower', cursive;background-color:#E9D3B1; box-sizing:border-box;}
     
 header {width:100%; background-color: #9091c9;height:10vh;margin: 0px;
     padding:32px;
