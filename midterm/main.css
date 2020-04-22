@@ -17,8 +17,8 @@ main p {font-family: 'Roboto', sans-serif; font-size: 18px}
 .grid-container {display: grid;  
 grid-gap: 20px;
 
- grid-template-columns: repeat(4, 1fr);
- grid-template-rows: repeat(3, 1fr);}
+ grid-template-columns: 2fr 1fr;
+ grid-template-rows: 1fr;}
  
 .grid-item {
               
@@ -27,20 +27,19 @@ grid-gap: 20px;
               font-size: 150%; 
    }
       
-         .gd-a {
-            grid-column: 1/ 4;
-            grid-row: 1 / 4;
+         /* .gd-a { */
+           /** grid-column:1/ 4;
+            grid-row: 1 / 4;**/
         }
           
-          .gd-b {
-              grid-column: 4/5;
-              grid-row: 1/2;
+          /* .gd-b { */
+             /* /** grid-column: 4/5; */
+              /* grid-row: 1/2;**/ 
           }
-          .gd-c {
+          /**.gd-c {
               grid-column: 4/5;
               grid-row: 2/3; 
-          }
-
+          } **/
  .grid-containers { display:grid; 
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
