@@ -12,6 +12,8 @@ height: 200px;}
 .foot{height:100px;}
 #footinmouth{background-color:blueviolet;}
 #papaz {background-color:chartreuse;}
+.footone{background-color: blue;}
+
 </style>
 </head>
 <body>
@@ -37,6 +39,7 @@ height: 200px;}
    var pinkButton = document.getElementById("changeToPink");
 var papaz = document.getElementById("papaz");
 var sendDown = document.getElementById("sendDown");
+var foot =document.getElementById("foot");
 
     myHeader.style.color="red";
     myHeader.style.backgroundColor = "plum"; 
@@ -66,8 +69,18 @@ sendDown.addEventListener("click", function(){
 papaz.appendChild(notification);
 });
 
+foot.addEventListener("click", function(){
+    footDown.style.backgroundColor="green"
+    var notification = document.createElement("h2")
+    notifcation.innerText = "dont put your foot in mouth"
+    footDown.appendChild(notification);
+});
+
+
+
   </script>  
-<footer> </footer>
+<footer> <div id="foot" class="footone"> 
+    <button id="footDown">your foot goes here</button></div></footer>
 </body>
 
 </html>
