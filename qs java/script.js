@@ -14,16 +14,17 @@ header.style.backgroundColor = "rgb(" + redComp + " , " + greenComp + ", " + blu
 }
 var swapQuokkaImage = function (){ 
     console.log(quokkaImage.alt);
-     if (quokkaImage.alt =="First image of a cute quokka");
+     if (quokkaImage.alt == "First image of a cute quokka"){
      quokkaImage.src ="Quokka2.jpg";
      quokkaImage.alt = "Second image of a cute quokka";
      quokkaButton.innerText ="Show the first one!";
-} else{ 
-     var swapQuokkaImage = function(){
-    quokkaImage.src ="Quokka.png";
+} else { 
+     
+   quokkaImage.src ="Quokka.png";
     quokkaImage.alt = "First image of a cute quokka";
     quokkaButton.innerText ="Show the second one!";
 }
-
+}
 headerColorChange();
 hColorChangeBtn.addEventListener("click", headerColorChange);
+quokkaButton.addEventListener("click",swapQuokkaImage);
