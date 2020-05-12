@@ -8,10 +8,7 @@ header {
     background-color:  rgb(111, 73, 248);
 }
 
-.logo {
-    max-width: 75px;
-    margin: 10px;
-}
+main div{display:inline;}
 
 .toggle-button {
     width: 40px;
@@ -52,7 +49,7 @@ main {
 }
 
 section {
-    padding: 20px;
+    padding: 10px; h
 }
 
 img {
@@ -67,17 +64,10 @@ img {
 @media (min-width: 768px) {
 
 
-    .toggle-button {
-
-
-        display: none;
-
-    }
-
     ul.nav-links {
 
 
-        display: block;
+        display: none;
 
 
         float: right;
@@ -90,7 +80,7 @@ img {
     .nav-links li {
 
 
-        display: inline-block;
+        display: block;
 
 
         padding: 10px;
