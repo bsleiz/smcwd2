@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Javascript</title>
+<style> #header1{ color:black;}
+
+.pane {width: 100%;
+height: 200px;}
+#tealPane{ background-color: teal; }
+.foot{height:100px;}
+#footinmouth{background-color:blueviolet;}
+#papaz {background-color:chartreuse;}
+.footone{background-color: blue;}
+
+</style>
+</head>
+<body>
+    <h1 id="header1">Intro to JS</h1>
+ <section> 
+     <div class="pane" id="tealPane"></div>
+     <button id="changeToGreen">Change to Green</button>
+ </section>
+ <div class="foot" id="footinmouth"></div>
+<button id="changeToPink">Change to Pink</button>
+ 
+<p id="papaz" class= "paparazzi"> This is a crazy pargragrapoh that doesnt say 
+    much or say anything at all dotn read it at your leisure or at any other time. thanks. hello.</p>
+ <button id="sendDown">Send Down</button>
+ <script>
+
+      alert("Hello, World");
+    var response = prompt("What's your name?", "Pickle Rick");
+     var myHeader = document.getElementById("header1");
+    var greenButton = document.getElementById("changeToGreen");
+    var tealPane = document.getElementById("tealPane");
+   var footinmouth = document.getElementById("footinmouth");
+   var pinkButton = document.getElementById("changeToPink");
+var papaz = document.getElementById("papaz");
+var sendDown = document.getElementById("sendDown");
+var foot =document.getElementById("foot");
+
+    myHeader.style.color="red";
+    myHeader.style.backgroundColor = "plum"; 
+    myHeader.style.fontSize ="56px";
+    myHeader.innerText ="Hello, "  + response;
+    console.log("Hello " + 5 + " pickles");
+
+    greenButton.addEventListener("click", function(){
+        tealPane.style.backgroundColor = "green"; tealPane.style.fontSize= "30px";
+        var notification = document.createElement("h3")
+        notification.innerText = "This is green now!" 
+            tealPane.appendChild(notification);
+   
+    });
+    
+pinkButton.addEventListener("click", function(){
+    footinmouth.style.backgroundColor = "pink";
+    var notification = document.createElement("h3")
+    notification.innerText = "This is pink now!!"
+footinmouth.appendChild(notification);
+});
+    
+sendDown.addEventListener("click", function(){
+    papaz.style.color = "red"; 
+    var notification = document.createElement("h1")
+    notification.innerText = "why you hit my paragragh, yo"
+papaz.appendChild(notification);
+});
+
+foot.addEventListener("click", function(){
+    footDown.style.backgroundColor="green"
+    var notification = document.createElement("h2")
+    notifcation.innerText = "dont put your foot in mouth"
+    footDown.appendChild(notification);
+});
+
+
+
+  </script>  
+<footer> <div id="foot" class="footone"> 
+    <button id="footDown">your foot goes here</button></div></footer>
+</body>
+
+</html>
