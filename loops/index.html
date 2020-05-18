@@ -25,13 +25,15 @@
     <script>
     var groupSelect = document.getElementById("groupSelect");
     var catSelect = document.getElementById("catSelect");
+    var galleryImg =document.getElementById("galleryImg");
+    
     var catAnimals = ["Puppies", "Kittens", "Quokkas"];
-    var catFood = ["Coffee","Dessert","Cocktails", "Muffins", "Pineapples", "Onions"];
+    var catFood = ["Coffee", "Dessert", "Cocktails", "Muffins", "Pineapples", "Onions"];
     var catNature = ["Forests", "Beaches", "Mountains"];
 
 var imageCounter = 1;
 
-    groupSelect.addEventListener('change', function(){
+    groupSelect.addEventListener("change", function(){
         console.log(groupSelect.value);
         if (groupSelect.value == "animals"){
 fillCategory(catAnimals);
@@ -46,7 +48,7 @@ else {
     });
 
 var fillCategory = function(catArray){
- catSelect.innerHtml = "";
+ catSelect.innerHTML = "";
 catArray.forEach(function(member){
 var opt = document.createElement('option');
 opt.value = member.toLowerCase();
