@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carousel of Music</title>
 </head>
 <body>
     <header>
         <form method = "GET" action = "">
            <label for = "groupSelect">Group</label>
                 <select id = "groupSelect">
-                <option value = "animals">Cute Animals</option>
-                <option value = "food">Food</option>
-                <option value = "nature">Nature</option>
+                <option value = "drums">Drums</option>
+                <option value = "guitars">Guitars</option>
+                <option value = "keyboards">Keyboards</option>
             </select>
             <label for = "catSelect">Category</label>
             <select id = "catSelect"></select>
@@ -20,27 +20,27 @@
     </header>
     <hr>
     <main id="gallery">
-        <img src ="quokka1.jpg" alt="cute image of quokka number one" id="galleryImg">
+        <img src ="" alt="" id="galleryImg">
     </main>
     <script>
     var groupSelect = document.getElementById("groupSelect");
     var catSelect = document.getElementById("catSelect");
     var galleryImg =document.getElementById("galleryImg");
     
-    var catAnimals = ["Puppies", "Kittens", "Quokkas"];
-    var catFood = ["Coffee", "Dessert", "Cocktails", "Muffins", "Pineapples", "Onions"];
-    var catNature = ["Forests", "Beaches", "Mountains"];
+    var catDrums = ["Acoustic", "Electric"];
+    var catGuitars = ["Bass", "Acoustic"];
+    var catKeyboards = ["Pianos", "Electric"];
 
-var imageCounter = 1;
+
 
     groupSelect.addEventListener("change", function(){
         console.log(groupSelect.value);
-        if (groupSelect.value == "animals"){
-fillCategory(catAnimals);
-        } else if (groupSelect.value == "food"){
-            fillCategory(catFood);
-           } else if (groupSelect.value == "nature"){
-            fillCategory(catNature);  
+        if (groupSelect.value == "drums"){
+fillCategory(catDrums);
+        } else if (groupSelect.value == "guitars"){
+            fillCategory(catGuitars);
+           } else if (groupSelect.value == "keyboards"){
+            fillCategory(catKeyboards);  
 }
 else {
         catSelect.innerHTML = "";       
@@ -56,24 +56,25 @@ opt.textContent = member;
 catSelect.appendChild(opt);
 });
 }
+
+
 var timerFunction = function(){
-    if (imageCounter == 1){
-        galleryImg.src = "quokka2.jpg";
+    if (imageCounter== 1){
+        galleryImg.src = "";
         imageCounter = 2;
 
-    } else if (imageCounter == 2){
-        galleryImg.src = "quokka3.jpg";
+    } else if ( imageCounter==2){
+        galleryImg.src = "";
         imageCounter = 3;
        
-  }  else if (imageCounter == 3){
-        galleryImg.src = "quokka1.jpg";
+  }  else if (imageCounter==3){
+        galleryImg.src = "";
         imageCounter = 1;
   }}
-//  var newElem = document.createElementy('p');
-//    prompt("what's your email address!");
-//    document.getElementById('gallery').appendChild(newElem);}
 
 window.setInterval(timerFunction, 3000);
+
+
 
     </script>
 </body>

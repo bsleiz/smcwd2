@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <title>Carousel of Music</title>
+</head>
+<body>
+    <header>
+        <form method = "GET" action = "">
+           <label for = "groupSelect">Group</label>
+                <select id = "groupSelect">
+                <option value = "drums">Drums</option>
+                <option value = "guitars">Guitars</option>
+                <option value = "keyboards">Keyboards</option>
+            </select>
+            <label for = "catSelect">Category</label>
+            <select id = "catSelect"></select>
+        </form>
+    </header>
+    <hr>
+    <main id="gallery">
+        <img src ="pearldrums.jpg" alt="nice pearl drums" id="galleryImg">
+    </main>
+    <script>
+    var groupSelect = document.getElementById("groupSelect");
+    var catSelect = document.getElementById("catSelect");
+    var galleryImg =document.getElementById("galleryImg");
+    
+    var catDrums = ["Acoustic", "Electric"];
+    var catGuitars =  ["Acoustic","Bass"];
+    var catKeyboards = ["Electric","Pianos"];
+
+
+
+    groupSelect.addEventListener("change", function(){
+        console.log(groupSelect.value);
+        if (groupSelect.value == "drums"){
+fillCategory(catDrums);
+        } else if (groupSelect.value == "guitars"){
+            fillCategory(catGuitars);
+           } else if (groupSelect.value == "keyboards"){
+            fillCategory(catKeyboards);  
+}
+else {
+        catSelect.innerHTML = "";       
+         } 
+    });
+
+var fillCategory = function(catArray){
+ catSelect.innerHTML = "";
+catArray.forEach(function(member){
+var opt = document.createElement('option');
+opt.value = member.toLowerCase();
+opt.textContent = member;
+catSelect.appendChild(opt);
+});
+}
+
+
+var drumAcoustic =["pearldrums.jpg", "tamadrums.png", "odery.jpg"];
+var drumElectric=["alesisdrums.jpg", "roland.jpg","emergedrums.jpg"];
+var guitarAcoustic=["epiphone.jpeg","takamine.jpg","washburn.jpg"];
+var guitarBass =["erniebass.png","ibanezbass.jpg","fenderbass.jpg"];
+var keysElectric=["alesiskeys.png","fortekeys.png","nordkeys.jpg"];
+var keysPianos=["kawai.jpg","ritmuller.jpg","steinway.jpg"];
+
+var currentImg = 0;
+
+window.setInterval(musicGallery, 3000);
+
+function musicGallery(){
+var nextImg = currentImg + 1;
+if (fillCategory(catDrums)==catDrums["Acoustic"]){
+if(nextImg==drumAcoustic.length) 
+ nextImg=0;
+galleryImg.src = drumAcoustic[nextImg];
+currentImg=nextImg;
+}
+else if (fillCategory(catDrums)==catDrums["Electric"]){
+if (nextImg==drumElectric.length) 
+nextImg=0;
+galleryImg.src = drumElectric[nextImg];
+currentImg=nextImg;
+}
+
+else if (fillCategory(catGuitars)==catGuitars["Acoustic"]){
+if(nextImg==guitarAcoustic.length) 
+ nextImg=0;
+galleryImg.src = guitarAcoustic[nextImg];
+currentImg=nextImg;
+}
+
+ else if (fillCategory(catGuitars)==catGuitars["Bass"]){
+if (nextImg==guitarBass.length)
+nextImg=0;
+galleryImg.src = guitarBass[nextImg];
+currentImg=nextImg;
+}
+ 
+else if (fillCategory(catKeyboards)==catKeyboards["Electric"]){
+if(nextImg==keysElectric.length) 
+ nextImg=0;
+galleryImg.src = keysElectric[nextImg];
+currentImg=nextImg;
+} 
+
+else if (fillCategory(catKeyboards)==catKeyboards["Pianos"]){
+if (nextImg==keysPianos.length)
+nextImg=0;
+galleryImg.src = keysPianos[nextImg];
+currentImg=nextImg;
+}
+else{
+}
+}
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
