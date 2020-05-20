@@ -28,8 +28,8 @@
     var catSelect = document.getElementById("catSelect");
     var galleryImg =document.getElementById("galleryImg");
     
-    var catDrums = ["Acoustic", "Electric"];
-    var catGuitars =  ["Acoustic","Bass"];
+    var catDrums = ["Percussion", "Digital"];
+    var catGuitars =  ["Acoustics","Bass"];
     var catKeyboards = ["Electric","Pianos"];
 
 
@@ -47,6 +47,26 @@ else {
         catSelect.innerHTML = "";       
          } 
     });
+   
+
+   
+    catSelect.addEventListener("change", function(){
+        console.log(catSelect.value);
+        if (catSelect.value == "Digital" ){
+            currentMusic(drumAcoustic);  
+        } else if (catSelect.value == "Percussion" ){
+            currentMusic(drumElectric);  
+           } else if (catSelect.value == "Bass") {
+            currentMusic(guitarAcoustic);  
+        } else if (catSelect.value == "Acoustics" ){
+            currentMusic(guitarBass);  
+        } else if (catSelect.value == "Pianos" ){
+            currentMusic(keysElectric);  
+         } else if(catSelect.value == "Electric") {
+            currentMusic(keysPianos);  
+
+         }});
+
 
 var fillCategory = function(catArray){
  catSelect.innerHTML = "";
@@ -66,62 +86,16 @@ var guitarBass =["erniebass.png","ibanezbass.jpg","fenderbass.jpg"];
 var keysElectric=["alesiskeys.png","fortekeys.png","nordkeys.jpg"];
 var keysPianos=["kawai.jpg","ritmuller.jpg","steinway.jpg"];
 
+
 var currentImg = 0;
-
-window.setInterval(musicGallery, 3000);
-
-function musicGallery(){
-var nextImg = currentImg + 1;
-if (fillCategory(catDrums)==catDrums["Acoustic"]){
-if(nextImg==drumAcoustic.length) 
+var currentMusic= function(){
+  var nextImg = currentImg + 1;
+galleryImg.src = currentMusic[currentImg];
+if(nextImg==currentMusic.length) 
  nextImg=0;
-galleryImg.src = drumAcoustic[nextImg];
-currentImg=nextImg;
-}
-else if (fillCategory(catDrums)==catDrums["Electric"]){
-if (nextImg==drumElectric.length) 
-nextImg=0;
-galleryImg.src = drumElectric[nextImg];
-currentImg=nextImg;
 }
 
-else if (fillCategory(catGuitars)==catGuitars["Acoustic"]){
-if(nextImg==guitarAcoustic.length) 
- nextImg=0;
-galleryImg.src = guitarAcoustic[nextImg];
-currentImg=nextImg;
-}
-
- else if (fillCategory(catGuitars)==catGuitars["Bass"]){
-if (nextImg==guitarBass.length)
-nextImg=0;
-galleryImg.src = guitarBass[nextImg];
-currentImg=nextImg;
-}
- 
-else if (fillCategory(catKeyboards)==catKeyboards["Electric"]){
-if(nextImg==keysElectric.length) 
- nextImg=0;
-galleryImg.src = keysElectric[nextImg];
-currentImg=nextImg;
-} 
-
-else if (fillCategory(catKeyboards)==catKeyboards["Pianos"]){
-if (nextImg==keysPianos.length)
-nextImg=0;
-galleryImg.src = keysPianos[nextImg];
-currentImg=nextImg;
-}
-else{
-}
-}
-
-
-
-
-
-
-
+window.setInterval(currentMusic, 3000);
 
     </script>
 </body>
