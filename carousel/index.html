@@ -52,19 +52,18 @@ else {
    
     catSelect.addEventListener("change", function(){
         console.log(catSelect.value);
-        if (catSelect.value == "Digital" ){
-            currentMusic(drumAcoustic);  
-        } else if (catSelect.value == "Percussion" ){
-            currentMusic(drumElectric);  
-           } else if (catSelect.value == "Bass") {
-            currentMusic(guitarAcoustic);  
-        } else if (catSelect.value == "Acoustics" ){
-            currentMusic(guitarBass);  
-        } else if (catSelect.value == "Pianos" ){
-            currentMusic(keysElectric);  
-         } else if(catSelect.value == "Electric") {
-            currentMusic(keysPianos);  
-
+        if (catSelect.value == "Percussion" ){
+            window.setInterval(currentMusicFunction1, 3000);
+        } else if (catSelect.value ==  "Digital"){
+            window.setInterval(currentMusicFunction2, 3000);
+           } else if (catSelect.value == "Acoustics" ) {
+            window.setInterval(currentMusicFunction3, 3000);
+        } else if (catSelect.value == "Bass"){
+            window.setInterval(currentMusicFunction4, 3000);
+        } else if (catSelect.value == "Electric"){
+            window.setInterval(currentMusicFunction5, 3000); 
+         } else if (catSelect.value == "Pianos" ){
+            window.setInterval(currentMusicFunction6, 3000);
          }});
 
 
@@ -88,15 +87,46 @@ var keysPianos=["kawai.jpg","ritmuller.jpg","steinway.jpg"];
 
 
 var currentImg = 0;
-var currentMusic= function(){
-  var nextImg = currentImg + 1;
-galleryImg.src = currentMusic[currentImg];
-if(nextImg==currentMusic.length) 
+var nextImg = currentImg + 1;
+
+function currentMusicFunction1(){
+  if(nextImg==drumAcoustic.length){ 
+galleryImg.src = drumAcoustic[nextImg];
+nextImg=0;
+  currentImg =nextImg;
+  }}
+  
+  function currentMusicFunction2(){
+ if(nextImg==drumElectric.length) {
+  galleryImg.src = drumElectric[nextImg];
  nextImg=0;
-}
+   currentImg =nextImg;
+} }
 
-window.setInterval(currentMusic, 3000);
+function currentMusicFunction3(){
+if(nextImg==guitarAcoustic.length){ 
+galleryImg.src = guitarAcoustic[nextImg];
+ nextImg=0; currentImg =nextImg;
+ }}
 
+ function currentMusicFunction4(){
+  if(nextImg==guitarBass.length) {
+  galleryImg.src = guitarBass[nextImg];
+ nextImg=0;currentImg =nextImg;
+ }}
+
+ function currentMusicFunction5(){
+   if(nextImg==keysElectric.length){ 
+  galleryImg.src = keysElectric[nextImg];
+   nextImg=0;currentImg =nextImg;
+ }}
+
+ function currentMusicFunction6(){
+   if(nextImg==keysPianos.length) {
+  galleryImg.src = keysPianos[nextImg];
+   nextImg=0;currentImg =nextImg;
+ 
+ }}
     </script>
 </body>
 </html>
