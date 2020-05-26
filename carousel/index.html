@@ -26,12 +26,14 @@
     <script>
     var groupSelect = document.getElementById("groupSelect");
     var catSelect = document.getElementById("catSelect");
-    var galleryImg =document.getElementById("galleryImg");
+    var galleryImg = document.getElementById("galleryImg");
     
     var catDrums = ["Percussion", "Digital"];
     var catGuitars =  ["Acoustics","Bass"];
     var catKeyboards = ["Electric","Pianos"];
-
+    
+    var currentArray = drumAcoustic; 
+    var currentImg = 0;
 
 
     groupSelect.addEventListener("change", function(){
@@ -48,27 +50,8 @@ else {
          } 
     });
    
-
-   
-    catSelect.addEventListener("change", function(){
-        console.log(catSelect.value);
-        if (catSelect.value == "Percussion" ){
-            window.setInterval(currentMusicFunction1, 3000);
-        } else if (catSelect.value ==  "Digital"){
-            window.setInterval(currentMusicFunction2, 3000);
-           } else if (catSelect.value == "Acoustics" ) {
-            window.setInterval(currentMusicFunction3, 3000);
-        } else if (catSelect.value == "Bass"){
-            window.setInterval(currentMusicFunction4, 3000);
-        } else if (catSelect.value == "Electric"){
-            window.setInterval(currentMusicFunction5, 3000); 
-         } else if (catSelect.value == "Pianos" ){
-            window.setInterval(currentMusicFunction6, 3000);
-         }});
-
-
 var fillCategory = function(catArray){
- catSelect.innerHTML = "";
+catSelect.innerHTML = "";
 catArray.forEach(function(member){
 var opt = document.createElement('option');
 opt.value = member.toLowerCase();
@@ -76,7 +59,6 @@ opt.textContent = member;
 catSelect.appendChild(opt);
 });
 }
-
 
 var drumAcoustic =["pearldrums.jpg", "tamadrums.png", "odery.jpg"];
 var drumElectric=["alesisdrums.jpg", "roland.jpg","emergedrums.jpg"];
@@ -86,47 +68,40 @@ var keysElectric=["alesiskeys.png","fortekeys.png","nordkeys.jpg"];
 var keysPianos=["kawai.jpg","ritmuller.jpg","steinway.jpg"];
 
 
-var currentImg = 0;
-var nextImg = currentImg + 1;
 
-function currentMusicFunction1(){
-  if(nextImg==drumAcoustic.length){ 
-galleryImg.src = drumAcoustic[nextImg];
-nextImg=0;
-  currentImg =nextImg;
-  }}
+    catSelect.addEventListener("change", function(){
+        console.log(catSelect.value);
+        if (catSelect.value == "percussion" && groupSelect.value == "drums" ){
+            currentArray = drumAcoustic;
+        } else if (catSelect.value ==  "digital" && groupSelect.value == "drums") {
+            currentArray = drumElectric;
+           } else if (catSelect.value == "acoustics" && groupSelect.value == "guitars" ) {
+            currentArray = guitarAcoustic;
+        } else if (catSelect.value == "bass" && groupSelect.value == "guitars" ){
+            currentArray = guitarBass;
+        } else if (catSelect.value == "electric" && groupSelect.value == "keyboards" ){
+            currentArray = keysElectric;
+         } else if (catSelect.value == "pianos" && groupSelect.value == "keyboards"){
+            currentArray = keysPianos;
+         
+     } });
+
+function currentMusic(){
+    console.log(currentArray);
+
+    galleryImg.src = currentArray[currentImg];
+    currentImg = currentImg + 1;  
+    
+  if (currentImg == currentArray.length){ 
+    currentImg = 0;
+  }
+  }
+ window.setInterval(currentMusic, 3000);
   
-  function currentMusicFunction2(){
- if(nextImg==drumElectric.length) {
-  galleryImg.src = drumElectric[nextImg];
- nextImg=0;
-   currentImg =nextImg;
-} }
-
-function currentMusicFunction3(){
-if(nextImg==guitarAcoustic.length){ 
-galleryImg.src = guitarAcoustic[nextImg];
- nextImg=0; currentImg =nextImg;
- }}
-
- function currentMusicFunction4(){
-  if(nextImg==guitarBass.length) {
-  galleryImg.src = guitarBass[nextImg];
- nextImg=0;currentImg =nextImg;
- }}
-
- function currentMusicFunction5(){
-   if(nextImg==keysElectric.length){ 
-  galleryImg.src = keysElectric[nextImg];
-   nextImg=0;currentImg =nextImg;
- }}
-
- function currentMusicFunction6(){
-   if(nextImg==keysPianos.length) {
-  galleryImg.src = keysPianos[nextImg];
-   nextImg=0;currentImg =nextImg;
  
- }}
+
+
+ 
     </script>
 </body>
 </html>
