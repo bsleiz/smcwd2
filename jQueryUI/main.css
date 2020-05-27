@@ -1,0 +1,29 @@
+img {
+    max-width: 150px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+  .grid > div {
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  body {
+    margin: 2rem;
+    font: 12px system-ui;
+  }
+
+  .product-cart {
+      background-image:url("https://cdn4.iconfinder.com/data/icons/shopping-in-color/64/shopping-in-color-05-512.png");
+      background-repeat: no-repeat;
+      background-color:lightsalmon;
+      background-position: top left;
+      background-size:200px;
+      min-height:200px;
+ }
+  .product-cart p {
+      text-align: center;
+}
