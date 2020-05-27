@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href= "main.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<title>jQueryHomework</title>
+</head>
+<body>
+    <main>
+        <div class="grid">
+                <div class="box box1"><img src="halojQ.jpeg" id="halo"><button id="clickA">You've been warned</button></div>
+                <div class="box box2"><img src="oldgamjQ.jpeg" id="oldgame"><button id="clickB">It's getting serious</button></div>
+                <div class="box box3"><img src="sonicjQ.jpeg" id="sonic"><button id="clickC">Somebody's gonna get it</button></div>
+                <div class="box box4"><img src="starwarsjQ.jpeg" id="starwars"><button id="clickD">I'm bringing out the...watergun</button></div>
+        </div>
+    </main>
+<script>
+$(document).ready(function(){
+$('#clickA').click(function(){
+$('#halo').toggle();
+if ($(this).text() == "You've been warned"){
+     $(this).text("Bring back halo?").css('background-color', 'red');
+} else {
+      $(this).text("You've been warned").css('background-color', '');
+}
+});
+$('#clickB').click(function(){
+$('#oldgame').toggle();
+if ($(this).text() == "It's getting serious"){
+     $(this).text("Where did old game go?");
+} else { 
+     $(this).text("It's getting serious");
+}
+}); 
+$('#clickC').click(function(){
+$('#sonic').toggle(); 
+if ($(this).text() == "Somebody's gonna get it"){
+     $(this).text("Where did sonic go? ").width('400px').height('400px').css('background-color', 'green');
+} else {
+      $(this).text("Somebody's gonna get it").width('').height('').css('background-color', '');
+}
+});
+
+$('#clickD').click(function(){
+$('#starwars').toggle(); 
+
+if ($(this).text() == "I'm bringing out the...watergun"){
+     $(this).text("Where are my stromtroppers?").append('<p> DID YOU KNOW! Star wars is the highest grossing movie series of all time.But I like the going trekkie more.</p>');
+     var image = new Image();
+image.src = "vtrek.jpg";
+$('.box4').append(image);
+} else { 
+     $(this).text("I'm bringing out the...watergun");
+     $('.box4 img:last-child').remove();
+}
+});
+});
+
+</script>
+</body>
+</html>
