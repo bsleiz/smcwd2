@@ -1,0 +1,56 @@
+body {
+    margin:0px; 
+    box-sizing:border-box; 
+    max-width:100%;
+    font-family: 'Courier New', Courier, monospace,;
+    background-color:rgb(175, 160, 206);
+}
+header {
+   background-color: rgb(149, 110, 226);
+}
+
+.ui-widget{ 
+    list-style:none;
+    max-width: 250px;
+    box-sizing: border-box;
+}
+.accord {
+    box-sizing:border-box;
+}
+
+@media (min-width:320px) {
+    .ui-widget{ 
+        max-width: 80px;
+        box-sizing: border-box;
+    }
+img {
+    width:auto;
+   }
+#autocomplete{
+    position: relative;
+    top:-100px; 
+    left:100px;
+}
+}
+@media (min-width: 768px) {
+main {
+     width: 650px; 
+
+} 
+}
+ /**END OF MID-SCREEN MEDIA QUERY**/
+ 
+@media (min-width:960px) {
+main {
+    width: 800px;
+}
+
+#autocomplete{
+    position: relative;
+    top:-390px; 
+    left:500px;
+}
+}
+/**END OF LARGE SCREEN MEDIA QUERY**/
+
+
