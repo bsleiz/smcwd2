@@ -5,42 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQueryUI homework</title>
     <link rel = "stylesheet" href="main.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
-    <link rel="stylesheet" href="/resources/demos/style.css"> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-   <script>
+  <script>
     $(document).ready(function() {
-      $("#accordion").accordion();
+    $("#accordion").accordion();
     var availableFood = [
-      'apples',
-      'bananas',
-      'coffee',
-      'cookies',
-      'danishes',
-      'edibles',
-      'fondue',
-      'grapes',
-      'half & half',
-      'indian goose berry',
-      'jackfruit',
-      'klondike',
-      'lemon',
-      'mango',
-      'nutella',
-      'orange',
-      'peas',
-      'quince',
-      'raspberries',
-      'strawberries',
-      'tangerines',
-      'ugli fruit',
-      'vanilla bean',
-      'watermelon',
-      'xigua',
-      'yogurt',
-      'zucchini'
-    ];
+      'apples', 'bananas','coffee','cookies', 'danishes', 'edibles', 'fondue',
+      'grapes', 'half & half','indian goose berry', 'jackfruit', 'klondike',
+      'lemon','mango', 'nutella', 'orange', 'peas', 'quince', 'raspberries',
+      'strawberries','tangerines', 'ugli fruit', 'vanilla bean', 'watermelon',
+      'xigua', 'yogurt', 'zucchini'];
     $("#food").autocomplete({
       source: availableFood
     });
@@ -49,14 +25,15 @@
   </head>
   <body>
     <main>
-    <div class="fruit cake cake1"><img src="cakeflower.jpg"></div>
+    <div class="fruit-cake">
     <div class="ui-widget" id="autocomplete">
         <label for="Food">What food are you looking for? </label>
         <input id="food">
     </div>
+    </div>
     <div id="accordion" class="accord">
     <h3>Mother of all Fruits</h3>
-    <div class="fruit fruit1"><img src="mameysapotesmother.jpg">
+    <div><img src="mameysapotesmother.jpg">
       <p>Kumu Aina Farm deems that the Mamey Sapote should be called the mother of all fruits. Some fruits have a distinction above others. Two that come to mind are the Durian, known as the king of all fruits and the Mangosteen called the queen of all fruits. Hefty titles, indeed.
          On our farm, we have dubbed the Mamey as the mother of all fruits. There are many reasons why this fruit is entitled to be called this. They are by far the most popular exotic fruit on our farm, are nutritionally superior to most fruits, are ever bearing, and one fruit is usually enough food for even a hearty appetite.
         Out of 600 fruit trees on our farm, 125 are mamey trees. We have been told that this is the largest mature orchard of mamey in Hawaii.  These fruits can weight between ½ to 5 lbs. with the average weight of 1-1/2 pounds. At a 130 ft. elevation, we grow two varieties, the Magaña and the Pantin.
@@ -64,14 +41,14 @@
      </p>
     </div>
     <h3>King of all Fruits</h3>
-    <div class="fruit fruit2"><img src ="duriankingred.jpg">
+    <div><img src ="duriankingred.jpg">
       <p>The durian is a perfectly unique tropical fruit!
         You can't compare it to a soursop or a jackfruit although both fruits have similar shape, size and husk colour to the durian. Durian is exquisite! There is no fruit in the world just like it!
         Durian (Durio zibethinus) is a Southeast Asian tropical plant known for its hefty, spine-covered fruit and sulfury and onion-like odor. Here we present a draft genome assembly of D. zibethinus, representing the third plant genus in the Malvales order and first in the Helicteroideae subfamily to be sequenced. Single-molecule sequencing and chromosome contact maps enabled assembly of the highly heterozygous durian genome at chromosome-scale resolution. Transcriptomic analysis showed upregulation of sulfur-, ethylene-, and lipid-related pathways in durian fruits. We observed paleopolyploidization events shared by durian and cotton and durian-specific gene expansions in MGL (methionine γ-lyase), associated with production of volatile sulfur compounds (VSCs). MGL and the ethylene-related gene ACS (aminocyclopropane-1-carboxylic acid synthase) were upregulated in fruits concomitantly with their downstream metabolites (VSCs and ethylene), suggesting a potential association between ethylene biosynthesis and methionine regeneration via the Yang cycle. The durian genome provides a resource for tropical fruit biology and agronomy.
       </p>
     </div>
     <h3>Queen of all Fruits</h3>
-    <div class="fruit fruit3"><img src="mangosteenqueen.png">
+    <div><img src="mangosteenqueen.png">
       <p>Mangosteen (Garcinia mangostana) is an exotic, tropical fruit with a slightly sweet and sour flavor. It's originally from Southeast Asia but can be found in various tropical regions around the world. The fruit is sometimes referred to as purple mangosteen because of the deep purple color its rind develops when ripe.
         One of the most praised of tropical fruits, and certainly the most esteemed fruit in the family Guttiferae, the mangosteen, Garcinia mangostana L., is almost universally known or heard of by this name. There are numerous variations in nomenclature: among Spanish-speaking people, it is called mangostan; to the French, it is mangostanier, mangoustanier, mangouste or mangostier; in Portuguese, it is mangostao, mangosta or mangusta; in Dutch, it is manggis or manggistan; in Vietnamese, mang cut; in Malaya, it may be referred to in any of these languages or by the local terms, mesetor, semetah, or sementah; in the Philippines, it is mangis or mangostan. Throughout the Malay Archipelago, there are many different spellings of names similar to most of the above.
       </p>

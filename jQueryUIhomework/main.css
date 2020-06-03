@@ -7,44 +7,28 @@ body {
     background-color:rgb(175, 160, 206);
 }
 .accord {
-    margin: auto;
+    text-align:center;
 }
-.cake img {
+.accord img { 
     max-width:100%;
-}   
-.ui-widget { 
-    list-style:none;
-   max-width: 220px;
-   text-align:center;
 }
+.accord p {  
+    text-align: left;
+}
+.fruit-cake {
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    background-image: url("cakeflower.jpg");
+    background-position: center ; 
+    background-size: cover;
+    height:500px;
+}    
 ul.ui-autocomplete {
     background-color:gold;
     width:150px;
     text-align:left;
+    list-style:none;
 }
-
-@media (min-width:320px) {
-#autocomplete{
-    position: relative;
-    top:-305px; 
-    left:120px;
-}
-}
-
-@media (min-width: 768px) {
-}
- /**END OF MID-SCREEN MEDIA QUERY**/
- 
-@media (min-width:960px) {
-.cake1 img {
-    width:100%;
-}
-#autocomplete {
-    position: relative;
-    top:-370px; 
-    left:690px;
-}
-}
-/**END OF LARGE SCREEN MEDIA QUERY**/
 
 
