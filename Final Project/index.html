@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="header.css">
-    <link href="main.css">
-    <script src="script.js"></script>
+<link href="navbar.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="script.js" rel="text/javascript"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+   
     <title>Nonprofit</title>
 </head>
 <body>
     <header>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+        <nav>
+           <img src="nrdclogo.png"alt="company logo" class="logo">
+                    <label for="toggleAssist">
+                        
+                        <img src="hamburgernrdc.png" class="toggle-button" alt="hamburger menu toggle button">
+                        </label>
+                        <input type="checkbox" id="toggleAssist">
+              <ul class="nav-links">
+         <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li> <a href="donate.html">Donate</a></li>
             <li><a href="blog.html">Blog</a></li>
         </ul>
+          
+            
+        <ol>
+        <li class="ui-widget" id="autocomplete">
+            <label for="Search">Search</label>
+            <input id="search"></li></ol>
+    </nav>
     </header>
-    <main>
-    <div id="welcome">
+  <main class="mainphoto">
+    <div id="welcome" class="flex">
+<div>    
+<button id="tile1"> <img src ="flood.png" alt=""></button>
+</div>
 <div>
-<button id="tile1">Hello</button>
+    <button id="tile2"><img src ="floyd.png" alt=""></button>
+</div>
+<div>
+ <button id="tile3"><img src ="polar.png" alt=""></button>
 </div>
 
 <div>
-    <button id="tile2">Lets see</button>
-</div>
-
-<div>
-    
-    <button id="tile3">Lets hear</button>
-</div>
-
-
-<div>
-    <button id="tile4">Lets learn</button>
+    <button id="tile5"><img src ="redhouse.png" alt=""></button>
 </div>
 <div>
-    <button id="tile5">Lets read</button>
+    <button id="tile6"><img src ="townview.png" alt=""></button>
 </div>
-<div>
-    <button id="tile6">Lets find</button>
-</div>
-
 
     </div>
     </main>

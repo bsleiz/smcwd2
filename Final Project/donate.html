@@ -3,26 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="header.css">
-    <link href="main.css">
-    <script src="script.js"></script>
     <title>Nonprofit</title>
+    <link href="navbar.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="script.js" rel="text/javascript"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <script>
+      $(document).ready(function(e) {
+        $('#submitted').on('click', function (e){
+            e.preventDefault();
+            $('#formed').hide();
+           
+     document.window('Thank you for your grand gesture. We really appreciate your contribution.');
+        });
+        
+        });
+        </script>
+
 </head>
 <body>
     <header>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li> <a href="donate.html">Donate</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
+        <nav>
+ <img src="nrdclogo.png" alt="company logo" class="logo">
+                        <label for="toggleAssist">
+                            <img src="hamburgernrdc.png" class="toggle-button" alt="hamburger menu toggle button">
+                            </label>
+                            <input type="checkbox" id="toggleAssist">
+                  <ul class="nav-links">
+             <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li> <a href="donate.html">Donate</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+               <ol><li class="ui-widget" id="autocomplete">
+                    <label for="Search">Search</label>
+                    <input id="search"></li></ol> 
+                
+          
+        </nav>
     </header>
     <main>
-    <form id="formed">
+    <form id="formed" post="get" action="">
         <label>Fill out this form and donate to a worthy cause</label>
         <input type="name" required="required"></input>
+        <label for ="name" class="name"></label>
         <input type="name" required="required"></input>
+        <label for ="name" class="name"></label>
         <input type ="email" required="required"><input>
+        <label for ="email" class="email"></label>
         <button id="submitted" type="submit" class="donate">Donate now</button>
     </form>
     </main>

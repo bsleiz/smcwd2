@@ -1,4 +1,17 @@
-body {
-
-    margin:0px;
+.mainphoto{background-image:url('calm.png');
+background-repeat: none;
+background-position: cover;
+height:500px;
 }
+li.ui-widget{float:right;}
+
+.cross {display: block;
+    margin: auto;}
+
+    img{ margin:10px;}
+
+    .kids{background-image: url('kidsplay.png');
+        background-repeat: none;
+        background-position: cover;
+        height:500x;
+    }
