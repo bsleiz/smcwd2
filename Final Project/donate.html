@@ -13,17 +13,7 @@
     <script src="script.js" rel="text/javascript"></script>
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
-    <script>
-      $(document).ready(function(e) {
-        $('#submitted').on('click', function (e){
-            e.preventDefault();
-            $('#formed').hide();
-           
-     document.window('Thank you for your grand gesture. We really appreciate your contribution.');
-        });
-        
-        });
-        </script>
+    
 
 </head>
 <body>
@@ -56,8 +46,10 @@
         <label for ="name" class="name"></label>
         <input type ="email" required="required"><input>
         <label for ="email" class="email"></label>
-        <button id="submitted" type="submit" class="donate">Donate now</button>
+        <button id="submitted" type="submit" class="donated">Donate now</button>
     </form>
+   
     </main>
+    <div id="dialog" title="We appreciate you"><p>Thank you for your grand gesture. We really appreciate your contribution.</p></div> 
 </body>
 </html>
