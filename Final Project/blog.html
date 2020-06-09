@@ -6,39 +6,38 @@
     <title>Nonprofit</title>
     <link href="navbar.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
-   
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
-    
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="script.js" rel="text/javascript"></script>
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
-</head>
+  </head>
 <body>
     <header>
         <nav>
-           <img src="nrdclogo.png" alt="company logo" class="logo">
-                        <label for="toggleAssist">
-                            <img src="hamburgernrdc.png" class="toggle-button" alt="hamburger menu toggle button">
-                            </label>
-                            <input type="checkbox" id="toggleAssist">
-                  <ul class="nav-links">
-             <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="donate"> <a href="donate.html">Donate</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                </ul>
-            <ol> <li class="ui-widget" id="autocomplete">
-                <label for="Search">Search</label>
-                <input id="search"></li> </ol>
-        </nav>
+        <img src="nrdclogo.png" alt="company logo" class="logo">
+            <ol class="widget-link">
+             <li class="ui-widget" id="autocomplete">
+                 <label for="Search">Search</label>
+                 <input id="search"></li></ol>        
+            <label for="toggleAssist">
+             <img src="hamburgernrdc.png" class="toggle-button" alt="hamburger menu toggle button"></label>
+         <input type="checkbox" id="toggleAssist">
+               <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li class="donate"><a href="donate.html">Donate</a></li>
+             <li><a href="blog.html">Blog</a></li>
+         </ul>
+     </nav>
     </header>
     <main>
-    <section><img src="factory.png"><p>On April 28, Workers’ Memorial Day, at the reported urging of Tyson Foods, 
+    <section><img src="factory.png" class="factory">
+        <p class="fact">On April 28, Workers’ Memorial Day, at the reported urging of Tyson Foods, 
         President Trump invoked the Defense Production Act (DPA) with the stated goal of keeping meat processing
          (slaughterhouses) open through the COVID-19 crisis. In doing so, the President is attempting to trample over 
          state decisions intended to improve worker safety while responding to outbreaks of COVID-19 at many slaughterhouses. </p>
-        <img src="bleu.png" id="hotspot" alt="hotspots" class="firstcross cross"><p class="tyson">The President made clear in 
+        <img src="bleu.png" id="hotspot" alt="hotspots" class="firstcross cross">
+        <p class="tyson fact">The President made clear in 
             remarks that the primary aim of the order was to insulate the food giant from liability, 
          not ensure the safety of the food supplies or the workers who produce it. Adding insult to injury, this comes as calls 
          to use the DPA to ensure health workers have access to adequate personal protective equipment (PPE) go unheeded. These 
@@ -51,14 +50,18 @@
           also undermines the efforts of localities to force companies to look out for the basic safety of workers.
          Simply put: If companies like Tyson, JBS, and Smithfield are not ready to be responsible for the bare minimum of worker safety,
           then they are not ready to reopen. Our government has a responsibility to make sure that workers—especially those deemed 
-          essential or required to work—are protected.</p></section>
-
-    <section><img src="powerplant.png"> <p>
+          essential or required to work—are protected.
+        </p>
+        </section>
+ <section>
+     <img src="powerplant.png" class="factory">
+      <p class="fact">
         The Keystone XL tar sands pipeline got knocked down again this week when a federal judge 
         invalidated Nationwide Permit 12, a key water-crossing permit issued by the U.S. Army Corps 
         of Engineers and used by Keystone XL as well as many other pipeline projects. The permit has 
         been routinely used to help pipelines avoid thorough environmental reviews and fast-track their approval process.</p>
-        <img src="bleu.png" id="keystone" alt="pipeline" class="nextcross cross"><p class="oil">“The Trump administration’s
+        <img src="bleu.png" id="keystone" alt="pipeline" class="nextcross cross">
+        <p class="oil fact">“The Trump administration’s
              ongoing effort to give out goodies to Big Oil hit another setback,”
  says NRDC attorney Cecilia Segal. “Whether they like it or not, the Corps cannot skirt foundational environmental laws.”
 Challenged by a coalition of conservation and landowner groups, including NRDC, Nationwide Permit
@@ -77,18 +80,20 @@ President Obama agreed the risks were too high and vetoed the project in 2015, b
   long-delayed project move forward with construction on the U.S.-Canada border as early as this spring.
 But the latest courtroom win now bolsters the continuing fight by Indigeneous groups, conservationists,
  and landowners along the pipeline’s route to block its construction.
-
-    </p></section>
-
-    <section><img src="washhands.png"><p>
+ </p>
+</section>
+ <section>
+     <img src="washhands.png" class="factory">
+     <p class="fact">
         As hurricane season looms especially large this year, and COVID-19 reveals the deep cracks and fissures 
         in our nation’s response preparedness, North Carolina is gearing up to release its long-awaited plan to
          bolster climate resilience. The state’s “Climate Risk Assessment and Resilience Plan” is expected to 
          outline a comprehensive strategy to help North Carolina stay ahead of the ever-escalating climate crisis.
-          It can’t come soon enough.</p>
-          <img src="bleu.png" id="hurricane" alt="hurricanes" class="lastcross cross"><p class= "carolina">But
-               publishing a plan does not automatically
-               equate to implementing a plan. The success of North Carolina’s
+          It can’t come soon enough.
+        </p>
+ <img src="bleu.png" id="hurricane" alt="hurricanes" class="lastcross cross">
+ <p class= "carolina fact">But publishing a plan does not automatically
+equate to implementing a plan. The success of North Carolina’s
  resilience plan will ultimately be determined by the steps Governor Roy Cooper, the legislature, and state’s
   agencies take to implement the recommendations. That takes leadership and a firm directive from on high that 
   climate resilience is a priority for the state—a mandate that Governor Cooper has fortunately made abundantly clear.
@@ -102,8 +107,8 @@ Assess the Climate Risks and Prepare for Future Climate Impacts
 A climate risk assessment should identify vulnerable infrastructure assets, communities that have the most 
 vulnerable housing stock, public safety facilities located in harm’s way and a host of other much-needed 
 information. Such an assessment could be developed by drawing on the recently completed North Carolina Climate Science Report.
-  </p></section>
+  </p>
+</section>
 </main>
-
 </body>
 </html>
