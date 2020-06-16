@@ -2,126 +2,197 @@ body {
     margin: 0px;
     font-family: Roboto;
 }
+
 header {
     width: 100%;
-    padding: 0px; 
-    background-color:  rgb(73, 201, 248);
+    padding: 0px;
+    background-color:rgb(18, 126, 184);
 }
+
 .logo {
     max-width: 80px;
-    margin: 20px; 
-    padding:0px; 
+    margin: 20px;
+    padding-left: 20px;
+
 }
+
 .toggle-button {
     width: 40px;
     float: right;
-    margin: 15px;
-    padding: 0px;
-}
-ol.widget-link{
-    list-style:none; 
-    margin-right:20px;
-
-    
+    margin: 10px;
+    padding: 10px;
 }
 
+ol.widget-link {
+    list-style: none;
+    margin-left: 10px;
 
 
-#toggleAssist, ul.nav-links {
+}
+
+
+#toggleAssist,
+ul.nav-links {
     display: none;
 }
-#toggleAssist:checked + ul.nav-links {
-    display: block; 
-    text-align: right;
+
+#toggleAssist:checked+ul.nav-links {
+    display: block;
+
 }
+
+
+
 ul.nav-links {
     list-style: none;
     margin-right: 15px;
 }
+
 ul.nav-links li {
     margin: 10px;
 
 }
+
 .nav-links a {
     text-transform: uppercase;
     text-decoration: none;
-    color: rgb(191, 246, 250);}
+    color: rgb(191, 246, 250);
+}
 
-    li.donate {background-color:green;}
+
+
+.green {
+    background-color: green;
+}
 
 
 main {
     max-width: 100%;
-    
-    
+
+
 }
+
 img {
     max-width: 100%;
 }
 
-@media (min-width:320px){
- .ui-autocomplete-input{width:80px;}  
-ol.widget-link {list-style:none;
-float:left; padding:5px 10px 0px 10px;
+@media (min-width:320px) {
+    .ui-autocomplete-input {
+        width: 80px;
+    }
 
-     display:block;
- 
+    ol.widget-link {
+        list-style: none;
+        float: left;
+        padding: 5px 10px 0px 10px;
+        display: block;
+    }
+
+
+    #toggleAssist:checked+ul.nav-links {
+        display: block;
+        text-align: center;
+    }
+
+
+
+
+    ul.nav-links {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    ul.nav-links li {
+
+        border-bottom: 1px solid black;
+        margin: auto;
+
+    }
 }
-#toggleAssist:checked + ul.nav-links {
-    display: block; 
-    text-align: center;
-    
-    
-}   
 
-ul.nav-links {
-    list-style: none;
-    margin:10px; padding:10px;
-   }
-ul.nav-links li {
-    
-    border: 1px solid black;margin:auto;
-
-} 
-}/** END OF SMALL SCREEN MEDIA QUERY **/
+/** END OF SMALL SCREEN MEDIA QUERY **/
 
 @media (min-width: 768px) {
-.toggle-button {
-    display: none;
-}
-ul.nav-links {
-    display: block;
-    float: right;
+
+    .flex-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .img-toggle {
+        display: none;
+    }
+
+
+    ul.nav-links {
+        display: flex;
+    }
+
+
+    ol.widget-link {
+        list-style: none;
+        margin-left: auto;
+
+
+    }
+
+    ul.nav-links li {
+        text-decoration: none;
+        border-bottom: none;
+        padding: 20px;
+
+    }
+
 }
 
-ol.widget-link{
-    list-style:none; display:block;
-    float:right;
-}
-ul.nav-links li {
-    display: inline-block;
-    border-bottom: none;
-    padding: 10px; border:none;
-}
-
-} /** END OF MID-SCREEN MEDIA QUERY **/
+/** END OF MID-SCREEN MEDIA QUERY **/
 
 @media (min-width: 960px) {
-.toggle-button {
-    display: none;
-}
-ul.nav-links {
-    display: block;
-    float: right;
-}
-ul.nav-links li {
-    display: inline-block; 
-    border-bottom: none;
-    padding: 10px; border:none;
-}
-ol.widget-link{
-    list-style:none; display:block;
-    float:right;padding:20px;}
+
+    .flex-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
 
 
-} /** END OF LARGE SCREEN MEDIA QUERY **/
+
+    .img-toggle {
+
+        display: none;
+    }
+
+
+    ul.nav-links {
+        display: flex;
+
+    }
+
+
+
+
+    ul.nav-links li {
+        text-decoration: none;
+        border-bottom: none;
+        padding: 20px;
+    }
+
+    ol.widget-link {
+        list-style: none;
+
+        margin-left: auto;
+
+    }
+
+
+
+
+
+}
+
+/** END OF LARGE SCREEN MEDIA QUERY **/

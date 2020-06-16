@@ -1,49 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Nonprofit</title>
+    <link href="footer.css" rel="stylesheet">
     <link href="navbar.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
-     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="script.js" rel="text/javascript"></script>
-   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
+
 <body>
     <header>
-        <nav>
-           <img src="nrdclogo.png" alt="company logo" class="logo">
-            <ol class="widget-link">
-             <li class="ui-widget" id="autocomplete">
-                 <label for="Search">Search</label>
-                 <input id="search"></li></ol>        
-            <label for="toggleAssist">
-             <img src="hamburgernrdc.png" class="toggle-button" alt="hamburger menu toggle button"></label>
-             <input type="checkbox" id="toggleAssist">
-               <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-             <li><a href="about.html">About</a></li>
-             <li class="donate"><a href="donate.html">Donate</a></li>
-             <li><a href="blog.html">Blog</a></li>
-         </ul>
-         </nav>
+        <nav class="flex-nav">
+            <a href="index.html"><img src="nrdclogo.png" alt="company logo" class="logo"></a>
+
+            <label for="toggleAssist" class="img-toggle">
+                <img src="hamburgernrdc.svg" class="toggle-button open" alt="hamburger menu toggle button"
+                    style="display:block;">
+                <img src="hamburgerclosenrdc.svg" class="toggle-button close" alt="hamburger close toggle button"
+                    style="display:none;">
+            </label>
+            <input type="checkbox" id="toggleAssist">
+            <ul class="nav-links hidden">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="about.html" class="nav-item">About</a></li>
+                <li class="green"><a href="donate.html" class="nav-item">Donate</a></li>
+                <li><a href="blog.html" class="nav-item">Blog</a></li>
+            </ul>
+        </nav>
     </header>
-    <main> 
+    <main>
+        <div class="banner">
+            <h3>NRDC works to safeguard the earth—its people, its plants and animals,
+                and the natural systems on which all life depends.</h3>
+        </div>
+        <h1>About Us</h1>
+        <p class="about bout">Our Leaders
+            NRDC was founded in 1970 by a group of law students and attorneys at the forefront of the environmental
+            movement.
+            Today's leadership team and board of trustees makes sure the organization
+            continues to work to ensure the rights of all people to clean air, clean water, and healthy communities.</p>
+        <img class="expert" src="johnadams.jpg" alt="picture of john adams">
+        <h2 class="history">History</h2>
         <p class="about">For nearly 60 years, WWF has worked to help people and nature thrive.
-     As the world’s leading conservation organization, WWF works in more than 100 countries. At every level,
-         we collaborate with people around the world to develop and deliver innovative solutions that protect 
-         communities, wildlife, and the places in which they live.</p>
-       <p class="about"> People are at the center of everything we do. WWF works to help local communities conserve the natural
-         resources they depend upon, transform markets and policies toward sustainability, and protect and restore 
-         species and their habitats. Our efforts ensure that the value of nature is reflected in decision-making from a local to a global scale.
-         WWF connects cutting-edge conservation science with the collective power of our partners in the field, 
-        more than one million supporters in the United States and five million globally, as well as partnerships 
-        with communities, companies, and governments.</p>
-    <p class="about"> Today, human activities put more pressure on nature than ever before, but it’s also people who have the 
-        power to change this trajectory. Together, we can address the greatest threats to life on this planet and protect the natural resources that sustain and inspire us.
-     </p>
-</main>
+            As the world’s leading conservation organization, WWF works in more than 100 countries. At every level,
+            we collaborate with people around the world to develop and deliver innovative solutions that protect
+            communities, wildlife, and the places in which they live.</p>
+        <img class="expert" src="bemnetalemayehu.jpg" alt="picture of ben netalemayehu">
+        <h2>People</h2>
+        <p class="about bout"> People are at the center of everything we do. WWF works to help local communities conserve the
+            natural
+            resources they depend upon, transform markets and policies toward sustainability, and protect and restore
+            species and their habitats. Our efforts ensure that the value of nature is reflected in decision-making from
+            a local to a global scale.
+            WWF connects cutting-edge conservation science with the collective power of our partners in the field,
+            more than one million supporters in the United States and five million globally, as well as partnerships
+            with communities, companies, and governments.</p>
+        <img class="expert" src="rabiabonour.jpg" alt="picture of rabi bonour">
+        <h2>Today</h2>
+        <p class="about bout"> Today, human activities put more pressure on nature than ever before, but it’s also people who
+            have the
+            power to change this trajectory. Together, we can address the greatest threats to life on this planet and
+            protect the natural resources that sustain and inspire us.
+        </p>
+        <img class="expert" src="evelynarevalo.jpg" alt="picture of evelyn arevalo">
+    </main>
+    <footer>
+        <div class="footer-flex footer">
+            <a href="index.html"><img src="nrdclogo.png" alt="company logo" class="logo-nrdc"></a>
+         <div class="widget-link">
+             <div class="ui-widget" id="autocomplete">
+                 <label for="Search" class="searches">Search</label>
+                 <input id="search" placeholder="Search">
+             </div>
+             </div>
+         <ul class=footer-links>
+             <li><a href="index.html" class="nav-item">Home</a></li>
+             <li><a href="about.html" class="nav-item">About</a></li>
+             <li class="green"><a href="donate.html" class="nav-item">Donate</a></li>
+             <li><a href="blog.html" class="nav-item">Blog</a></li>
+         </ul>
+ </div>
+ <div class="copy">&#169 NRDC by Brian Leisner</div>
+     </footer>
 </body>
+
 </html>
